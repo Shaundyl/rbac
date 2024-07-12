@@ -26,32 +26,6 @@ class BookController extends Controller
 
     }
 
-    // public function saveNewLedgerEntry(Request $request)
-    // {
-    //     // Validate the request data
-    //     $request->validate([
-    //         'entrydetail' => 'required|string',
-    //         'entryamount' => 'required|numeric',
-    //     ]);
-
-    //     // Check if the user is authorized to create a ledger entry
-    //     $response = Gate::inspect('create');
-
-    //     if ($response->allowed()) {
-    //         // Create a new ledger entry
-    //         $ledger = new Book();
-    //         $ledger->entry = $request->input('entrydetail');
-    //         $ledger->amount = $request->input('entryamount');
-    //         $ledger->user_id = Auth::id(); // Assuming the authenticated user is the encoder
-    //         $ledger->save();
-
-    //         // Redirect to the ledger list with a success message
-    //         return redirect()->route('ledgers')->with('success', 'Ledger entry saved successfully.');
-    //     } else {
-    //         // If not authorized, redirect back with an error message
-    //         return redirect()->back()->with('error', $response->message());
-    //     }
-    // }
 
     public function saveNewLedgerEntry(Request $request)
     {
